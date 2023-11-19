@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Success! Your changes have been applied. </h1>
+    </div>
+</div>
+<div class="container my-5">
+    <button class="btn btn-info mr-2" onclick="location.href='/movies'">back to movies</button>
+    <div class="col-md-6 text-left">
+        <a th:href="@{/}">Back to home</a>
+    </div>
+</div>
+</body>
+</html>

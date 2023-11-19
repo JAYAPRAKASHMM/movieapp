@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Management System</title>
+	<link rel="stylesheet"
+		  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+		  crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+	<h1>Movie Management System</h1>
+	<hr>
+	<h2>Save Movie</h2>
+
+	<form th:action="@{/movies/saveMovie}" th:object="${movie}" method="POST">
+		<div class="form-group">
+			<label for="name">Movie Name:</label>
+			<input type="text" th:field="*{name}" class="form-control mb-4 col-4" id="name" placeholder="Movie Name">
+		</div>
+		<div class="form-group">
+			<label for="dName">Director Name:</label>
+			<input type="text" th:field="*{dName}" class="form-control mb-4 col-4" id="dName" placeholder="Director Name">
+		</div>
+		<div class="form-group">
+			<label for="releaseYear">Release Year:</label>
+			<input type="number" th:field="*{year}" class="form-control mb-4 col-4" id="releaseYear" placeholder="Release Year">
+		</div>
+		<div class="form-group">
+			<label for="language">Language:</label>
+			<input type="text" th:field="*{language}" class="form-control mb-4 col-4" id="language" placeholder="Language">
+		</div>
+		<div class="form-group">
+			<label for="rating">Rating:</label>
+			<input type="text" th:field="*{rating}" class="form-control mb-4 col-4" id="rating" placeholder="Rating">
+		</div>
+
+
+		<button type="submit" class="btn btn-info col-2">Save Movie</button>
+	</form>
+
+	<hr>
+	<a th:href="@{/movies}">Back to Movie List</a>
+</div>
+</body>
+</html>
